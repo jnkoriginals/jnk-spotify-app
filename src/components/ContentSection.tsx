@@ -36,7 +36,7 @@ export default function TopContentSection({ token }: Props) {
 
     useEffect(() => {
         fetchRecent();
-    }, []);
+    });
 
     const fetchRecent = async () => {
         const recentRes = await fetch(
