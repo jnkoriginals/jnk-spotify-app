@@ -24,14 +24,14 @@ export default function UserProfile({ profile }: UserProfileProps) {
                 />
             ) : (
                 <div className='w-8 h-8 rounded-full flex items-center justify-center'>
-                    <User className='w-8 h-8 text-white' />
+                    <User className='w-8 h-8 text-black dark:text-white' />
                 </div>
             )}
             <div>
-                <p className='text-md font-semibold text-white'>
+                <p className='text-md font-semibold text-black dark:text-white'>
                     {profile.display_name}
                 </p>
-                <p className='text-xs text-gray-400'>
+                <p className='text-xs text-gray-500 dark:text-gray-400'>
                     {profile.followers.total.toLocaleString()} Follower
                 </p>
             </div>

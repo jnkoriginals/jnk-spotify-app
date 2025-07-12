@@ -41,11 +41,11 @@ export default function SegmentedButton({
     return (
         <div
             ref={containerRef}
-            className='relative flex rounded-lg overflow-hidden border border-zinc-800 w-full max-w-md'
+            className='relative flex rounded-lg overflow-hidden border border-black dark:border-zinc-800 w-full max-w-md'
         >
             {/* Sliding background */}
             <div
-                className='absolute top-0 h-full bg-zinc-700 transition-all duration-300 ease-in-out rounded-lg'
+                className='absolute top-0 h-full bg-black dark:bg-zinc-700 transition-all duration-300 ease-in-out rounded-lg'
                 style={{
                     width: `${segmentWidth}px`,
                     left: `${selectedIndex * segmentWidth}px`,
@@ -60,7 +60,11 @@ export default function SegmentedButton({
                         key={segment.value}
                         onClick={() => handleSelect(segment.value)}
                         className={`w-full px-4 py-2 text-sm font-medium z-10 transition-colors text-center focus:outline-none 
-              ${isSelected ? "text-white" : "text-zinc-300 hover:text-white"}`}
+              ${
+                  isSelected
+                      ? "text-white"
+                      : "text-black dark:text-zinc-300 hover:text-black dark:hover:text-white"
+              }`}
                         aria-pressed={isSelected}
                     >
                         {segment.label}

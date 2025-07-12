@@ -33,7 +33,7 @@ export default function TrackCard({
         //     target='_blank'
         //     rel='noopener noreferrer'
         // >
-        <div className='bg-zinc-900 hover:bg-zinc-800 p-4 rounded-2xl shadow flex items-center space-x-4 transition'>
+        <div className='bg-gray-100 hover:bg-gray-200 dark:bg-zinc-900 flex dark:hover:bg-zinc-800 p-4 rounded-2xl shadow items-center space-x-4 transition'>
             <h2 className='text-2xl font-semibold'>{index}</h2>
 
             <Image
@@ -48,13 +48,13 @@ export default function TrackCard({
                 className='rounded-md object-fill w-16 h-16'
             />
             <div className='w-48'>
-                <h2 className='text-white font-semibold text-lg'>
+                <h2 className='text-black dark:text-white font-semibold text-lg'>
                     {track.name}
                 </h2>
-                <p className='text-sm text-gray-400'>
+                <p className='text-sm text-black dark:text-gray-400'>
                     {track.artists.map((a) => a.name).join(", ")}
                 </p>
-                <p className='text-xs text-gray-500'>
+                <p className='text-xs text-gray-400 dark:text-gray-500'>
                     {durationMin}:{durationSec} min &bull; Popularity:{" "}
                     {track.popularity}
                 </p>

@@ -25,8 +25,10 @@ export default function ArtistCard({
         //     target='_blank'
         //     rel='noopener noreferrer'
         // >
-        <div className='bg-zinc-900 flex hover:bg-zinc-800 p-4 rounded-2xl shadow items-center space-x-4 transition'>
-            <h2 className='text-2xl font-semibold'>{index}</h2>
+        <div className='bg-gray-100 hover:bg-gray-200 dark:bg-zinc-900 flex dark:hover:bg-zinc-800 p-4 rounded-2xl shadow items-center space-x-4 transition'>
+            <h2 className='text-2xl font-semibold text-black dark:text-white'>
+                {index}
+            </h2>
             <Image
                 src={image?.url || ""}
                 alt={artist.name}
@@ -39,14 +41,14 @@ export default function ArtistCard({
                 className='rounded-full object-fill w-16 h-16 '
             />
 
-            <div className='w-48'>
-                <h2 className='text-white font-semibold text-lg'>
+            <div className='w-48 '>
+                <h2 className='text-black dark:text-white font-semibold text-lg'>
                     {artist.name}
                 </h2>
-                <p className='text-sm text-gray-400'>
+                <p className='text-sm text-black dark:text-gray-400'>
                     {artist.followers.total.toLocaleString()} Follower
                 </p>
-                <p className='text-xs text-gray-500'>
+                <p className='text-xs text-gray-400 dark:text-gray-500'>
                     {artist.genres?.slice(0, 2).join(", ")}
                 </p>
             </div>

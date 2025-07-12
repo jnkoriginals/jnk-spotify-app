@@ -36,7 +36,7 @@ export default function TopContentSection({ token }: Props) {
 
     useEffect(() => {
         fetchRecent();
-    });
+    }, []);
 
     const fetchRecent = async () => {
         const recentRes = await fetch(
@@ -54,8 +54,6 @@ export default function TopContentSection({ token }: Props) {
 
         setRecentTracks(recent.items);
     };
-
-    console.log(tracks);
 
     return (
         <div className='flex flex-col justify-center items-center font-[family-name:var(--font-geist-sans)] mt-4'>
