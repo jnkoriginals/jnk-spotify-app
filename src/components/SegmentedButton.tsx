@@ -59,7 +59,7 @@ export default function SegmentedButton({
                     <button
                         key={segment.value}
                         onClick={() => handleSelect(segment.value)}
-                        className={`w-full px-4 py-2 text-sm font-medium z-10 transition-colors text-center focus:outline-none 
+                        className={`w-full px-2 py-2 text-sm font-medium z-10 transition-colors text-center focus:outline-none 
               ${
                   isSelected
                       ? "text-white"
