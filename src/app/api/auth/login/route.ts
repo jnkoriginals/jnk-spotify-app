@@ -10,8 +10,6 @@ export async function GET() {
         redirect_uri: process.env.SPOTIFY_REDIRECT_URI!,
     });
 
-    console.log(params);
-
     return NextResponse.redirect(
         `https://accounts.spotify.com/authorize?${params.toString()}`
     );

@@ -23,7 +23,7 @@ export default async function Home() {
                 <h1 className='text-4xl font-bold flex justify-center mt-12'>
                     JnK <span className='text-green-500'>Spotify</span> Viewer
                 </h1>
-                <div className='flex flex-col gap-4 text-center md:w-5/12 mt-28 mx-2.5'>
+                <div className='flex flex-col gap-4 text-center md:w-5/12 mt-28 mx-3.5'>
                     <h2>
                         Welcome to <strong>JnK Spotify Viewer</strong>
                     </h2>
